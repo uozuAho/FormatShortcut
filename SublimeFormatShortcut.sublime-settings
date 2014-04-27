@@ -1,0 +1,6 @@
+{
+	"extension_formatter_mapping": {
+		"*.py": "pep8_autoformat"
+	}
+
+}
