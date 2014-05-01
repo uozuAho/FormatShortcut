@@ -17,3 +17,4 @@ class FormatCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         print("format shortcut: not implemented...")
+        self.view.run_command('pep8_autoformat')
