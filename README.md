@@ -4,6 +4,8 @@ SublimeFormatShortcut
 One command/shortcut to format any syntax in Sublime Text.
 Chooses a formatter based on current syntax highlighting setting.
 
+Note: doesn't include formatters, these must be installed separately.
+
 
 Configuration
 -------------
@@ -16,5 +18,6 @@ TODO
 ----
 - Format selection
 - Format as another syntax
+- Format selection as another syntax
 - Auto-install necessary formatter plugins?
 - Support standalone formatters (not sublime plugins)
