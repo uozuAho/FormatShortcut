@@ -1,0 +1,10 @@
+[{
+    "caption": "Format shortcut",
+    "children": [{
+        "caption": "Format",
+        "command": "sublime_format_shortcut"
+    }, {
+        "caption": "Format selection",
+        "command": "format_shortcut_selection"
+    }]
+}]
