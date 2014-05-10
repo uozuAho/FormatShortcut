@@ -6,5 +6,62 @@
     }, {
         "caption": "Format selection",
         "command": "format_shortcut_selection"
+    }, {
+        "caption": "Format selection as",
+        "children": [{
+            "caption": "c++",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "c++"
+            }
+        }, {
+            "caption": "c#",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "c#"
+            }
+        }, {
+            "caption": "css",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "css"
+            }
+        }, {
+            "caption": "html",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "html"
+            }
+        }, {
+            "caption": "java",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "java"
+            }
+        }, {
+            "caption": "javascript",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "javascript"
+            }
+        }, {
+            "caption": "php",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "php"
+            }
+        }, {
+            "caption": "python",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "python"
+            }
+        }, {
+            "caption": "xml",
+            "command": "format_shortcut_selection",
+            "args": {
+                "syntax": "xml"
+            }
+        }]
     }]
 }]
