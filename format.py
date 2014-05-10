@@ -58,15 +58,14 @@ class SublimeFormatShortcutCommand(sublime_plugin.TextCommand):
 class FormatShortcutSelectionCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        sel = self.view.sel()
-        region1 = sel[0]
-        selectionText = self.view.substr(region1)
-        tmp = self.view.window().new_file()
-        tmp.insert(edit, 0, selectionText)
-        tmp.set_syntax_file(self.view.settings().get('syntax'))
-        tmp.run_command('sublime_format_shortcut')
-        newtxt = tmp.substr(sublime.Region(0, tmp.size()))
-        self.view.replace(edit, region1, newtxt)
-        tmp.set_scratch(True)
-        self.view.window().focus_view(tmp)
-        self.view.window().run_command("close_file")
+        for region in self.view.sel():
+            selectionText = self.view.substr(region)
+            tmp = self.view.window().new_file()
+            tmp.insert(edit, 0, selectionText)
+            tmp.set_syntax_file(self.view.settings().get('syntax'))
+            tmp.run_command('sublime_format_shortcut')
+            newtxt = tmp.substr(sublime.Region(0, tmp.size()))
+            self.view.replace(edit, region, newtxt)
+            tmp.set_scratch(True)
+            self.view.window().focus_view(tmp)
+            self.view.window().run_command("close_file")
