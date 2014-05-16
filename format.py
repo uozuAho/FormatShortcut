@@ -36,6 +36,17 @@ def get_syntax_file(syntax_name):
         return 'Packages/' + syntax_name + '/' + syntax_name + '.tmLanguage'
 
 
+# Return the indentation of a region as whitespace characters
+def get_region_indentation(view, region):
+    # Return the leading whitespace of the first line of the region:
+    first_line = view.substr(view.line(region.begin()))
+    return get_leading_whitespace(first_line)
+
+
+def get_leading_whitespace(string):
+    return string[:-len(string.lstrip())]
+
+
 def run_format(view, syntax=None):
     if syntax is None:
         syntax = get_syntax_name(view.settings().get('syntax'))
@@ -73,6 +84,8 @@ class FormatShortcutSelectionCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, syntax=None):
         for region in self.view.sel():
+            dbg("region indentation: '" +
+                get_region_indentation(self.view, region) + "'")
             selectionText = self.view.substr(region)
             tmp = self.view.window().new_file()
             tmp.insert(edit, 0, selectionText)

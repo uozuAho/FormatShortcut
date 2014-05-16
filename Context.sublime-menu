@@ -9,58 +9,58 @@
     }, {
         "caption": "Format selection as",
         "children": [{
-            "caption": "c++",
+            "caption": "C++",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "c++"
+                "syntax": "C++"
             }
         }, {
-            "caption": "c#",
+            "caption": "C#",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "c#"
+                "syntax": "C#"
             }
         }, {
-            "caption": "css",
+            "caption": "CSS",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "css"
+                "syntax": "CSS"
             }
         }, {
-            "caption": "html",
+            "caption": "HTML",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "html"
+                "syntax": "HTML"
             }
         }, {
-            "caption": "java",
+            "caption": "Java",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "java"
+                "syntax": "Java"
             }
         }, {
-            "caption": "javascript",
+            "caption": "JavaScript",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "javascript"
+                "syntax": "JavaScript"
             }
         }, {
-            "caption": "php",
+            "caption": "PHP",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "php"
+                "syntax": "PHP"
             }
         }, {
-            "caption": "python",
+            "caption": "Python",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "python"
+                "syntax": "Python"
             }
         }, {
-            "caption": "xml",
+            "caption": "XML",
             "command": "format_shortcut_selection",
             "args": {
-                "syntax": "xml"
+                "syntax": "XML"
             }
         }]
     }]
