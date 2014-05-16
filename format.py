@@ -26,22 +26,13 @@ def get_format_command(syntax):
 
 
 def get_syntax_name(view_syntax_string):
-    # shameless rip from CodeFormatter. Cheers akalongman!
-    pattern = re.compile(r"Packages/(.+?)/.+?\.tmLanguage")
-    m = pattern.search(view_syntax_string)
-    found = ""
-    if (m):
-        for s in m.groups():
-            found = s
-            break
-    return found.lower()
+    spl = view_syntax_string.split('/')
+    if len(spl) > 1:
+        return spl[1]
 
 
 def get_syntax_file(syntax_name):
     if len(syntax_name) > 0:
-        # ensure correct case
-        syntax_name = syntax_name.lower()
-        syntax_name = syntax_name[0].upper() + syntax_name[1:]
         return 'Packages/' + syntax_name + '/' + syntax_name + '.tmLanguage'
 
 

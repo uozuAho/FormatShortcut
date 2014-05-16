@@ -1,14 +1,14 @@
 {
     "syntax_formatter_mapping": {
-        "c++": "astyleformat",
-        "c#": "astyleformat",
-        "css": "code_formatter",
-        "html": "code_formatter",
-        "java": "astyleformat",
-        "javascript": "code_formatter",
-        // "javascript": "js_format",
-        "php": "code_formatter",
-        "python": "pep8_autoformat",
-        "xml": "auto_indent"
+        "C++": "astyleformat",
+        "C#": "astyleformat",
+        "CSS": "code_formatter",
+        "HTML": "code_formatter",
+        "Java": "astyleformat",
+        "JavaScript": "code_formatter",
+        // "JavaScript": "js_format",
+        "PHP": "code_formatter",
+        "Python": "pep8_autoformat",
+        "XML": "auto_indent"
     }
 }

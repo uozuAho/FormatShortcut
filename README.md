@@ -16,7 +16,6 @@ formatters not included (install separately).
 
 TODO
 ----
-- Bug: syntax filename case. Use correct case in settings file to avoid issues.
 - Default to format selection if any selections made
 - Format selection: keep indentation
 - Auto-install necessary formatter plugins?
