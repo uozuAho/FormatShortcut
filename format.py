@@ -59,7 +59,14 @@ def run_format(view, syntax=None):
 class SublimeFormatShortcutCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        run_format(self.view)
+        is_text_selected = True
+        if len(self.view.sel()) == 1:
+            if self.view.sel()[0].empty():
+                is_text_selected = False
+        if is_text_selected:
+            self.view.run_command('format_shortcut_selection')
+        else:
+            run_format(self.view)
 
 
 class FormatShortcutSelectionCommand(sublime_plugin.TextCommand):

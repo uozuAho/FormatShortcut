@@ -16,7 +16,6 @@ formatters not included (install separately).
 
 TODO
 ----
-- Default to format selection if any selections made
 - Format selection: keep indentation
 - Auto-install necessary formatter plugins?
 - Support standalone formatters (not sublime plugins)
