@@ -1,6 +1,7 @@
 {
-    "syntax_formatter_mapping": {
-        "C++": "astyleformat",
+    "syntax_formatter_mapping":
+    {
+        "C++": "astyleformagt",
         "C#": "astyleformat",
         "CSS": "code_formatter",
         "HTML": "code_formatter",

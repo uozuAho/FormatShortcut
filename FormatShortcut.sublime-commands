@@ -1,0 +1,78 @@
+[
+    {
+        "caption": "FormatShortcut: format",
+        "command": "format_shortcut"
+    },
+    {
+        "caption": "FormatShortcut: format as C++",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "C++"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as C#",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "C#"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as CSS",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "CSS"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as HTML",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "HTML"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as Java",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "Java"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as JavaScript",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "JavaScript"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as PHP",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "PHP"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as Python",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "Python"
+        }
+    },
+    {
+        "caption": "FormatShortcut: format as XML",
+        "command": "format_shortcut",
+        "args":
+        {
+            "syntax": "XML"
+        }
+    }
+]

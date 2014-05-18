@@ -3,7 +3,7 @@ import sublime_plugin
 import re
 
 
-PLUGIN_NAME = u"SublimeFormatShortcut"
+PLUGIN_NAME = u"FormatShortcut"
 
 DEBUG = True
 

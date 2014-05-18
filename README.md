@@ -1,8 +1,9 @@
-SublimeFormatShortcut
-=====================
+Format Shortcut
+===============
 
 One command/shortcut to format any syntax in Sublime Text.
-Chooses a formatter based on current syntax highlighting setting.
+Chooses a formatter based on current syntax highlighting setting,
+or you can force formatting as another syntax.
 
 Note: doesn't include formatters, these must be installed separately.
 
