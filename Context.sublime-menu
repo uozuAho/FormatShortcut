@@ -2,63 +2,60 @@
     "caption": "Format shortcut",
     "children": [{
         "caption": "Format",
-        "command": "sublime_format_shortcut"
+        "command": "format_shortcut"
     }, {
-        "caption": "Format selection",
-        "command": "format_shortcut_selection"
-    }, {
-        "caption": "Format selection as",
+        "caption": "Format as",
         "children": [{
             "caption": "C++",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "C++"
             }
         }, {
             "caption": "C#",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "C#"
             }
         }, {
             "caption": "CSS",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "CSS"
             }
         }, {
             "caption": "HTML",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "HTML"
             }
         }, {
             "caption": "Java",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "Java"
             }
         }, {
             "caption": "JavaScript",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "JavaScript"
             }
         }, {
             "caption": "PHP",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "PHP"
             }
         }, {
             "caption": "Python",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "Python"
             }
         }, {
             "caption": "XML",
-            "command": "format_shortcut_selection",
+            "command": "format_shortcut",
             "args": {
                 "syntax": "XML"
             }

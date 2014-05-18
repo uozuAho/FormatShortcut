@@ -47,16 +47,12 @@ def get_leading_whitespace(string):
     return string[:-len(string.lstrip())]
 
 
-def run_format(view, syntax=None):
-    if syntax is None:
-        syntax = get_syntax_name(view.settings().get('syntax'))
+def format_view(view, syntax):
     format_command = get_format_command(syntax)
     if format_command is None:
         sublime.error_message(
             PLUGIN_NAME + ": no formatter set for syntax: " + syntax)
     else:
-        dbg("syntax: " + syntax)
-        dbg("syntax file: " + get_syntax_file(syntax))
         dbg("running formatter: " + format_command)
         # in case the formatter doesn't run when the view's
         # syntax doesn't match its supported syntaxes, temporarily
@@ -67,34 +63,33 @@ def run_format(view, syntax=None):
         view.set_syntax_file(tmp)
 
 
-class SublimeFormatShortcutCommand(sublime_plugin.TextCommand):
-
-    def run(self, edit):
-        is_text_selected = True
-        if len(self.view.sel()) == 1:
-            if self.view.sel()[0].empty():
-                is_text_selected = False
-        if is_text_selected:
-            self.view.run_command('format_shortcut_selection')
-        else:
-            run_format(self.view)
-
-
-class FormatShortcutSelectionCommand(sublime_plugin.TextCommand):
+class FormatShortcutCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, syntax=None):
-        for region in self.view.sel():
-            dbg("region indentation: '" +
-                get_region_indentation(self.view, region) + "'")
-            selectionText = self.view.substr(region)
-            tmp = self.view.window().new_file()
-            tmp.insert(edit, 0, selectionText)
-            if syntax is None:
-                syntax = get_syntax_name(self.view.settings().get('syntax'))
-            dbg("Running format on selected text, syntax: " + syntax)
-            run_format(tmp, syntax)
-            newtxt = tmp.substr(sublime.Region(0, tmp.size()))
-            self.view.replace(edit, region, newtxt)
-            tmp.set_scratch(True)
-            self.view.window().focus_view(tmp)
-            self.view.window().run_command("close_file")
+        if syntax is None:
+            syntax = get_syntax_name(self.view.settings().get('syntax'))
+        dbg("syntax: " + syntax)
+        dbg("syntax file: " + get_syntax_file(syntax))
+        if not self.is_text_selected():
+            format_view(self.view, syntax)
+        else:
+            dbg("Formatting selected text, syntax: " + syntax)
+            for region in self.view.sel():
+                self.format_selection(edit, region, syntax)
+
+    def is_text_selected(self):
+        if len(self.view.sel()) == 1:
+            if self.view.sel()[0].empty():
+                return False
+        return True
+
+    def format_selection(self, edit, region, syntax):
+        selected_text = self.view.substr(region)
+        temp_view = self.view.window().new_file()
+        temp_view.insert(edit, 0, selected_text)
+        format_view(temp_view, syntax)
+        newtxt = temp_view.substr(sublime.Region(0, temp_view.size()))
+        self.view.replace(edit, region, newtxt)
+        temp_view.set_scratch(True)
+        self.view.window().focus_view(temp_view)
+        self.view.window().run_command("close_file")
